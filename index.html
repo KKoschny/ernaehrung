@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ernährung &amp; Krebsrisiko – was steckt in Ihrem Essen?</title>
+  <meta name="description" content="Wie hochverarbeitete Lebensmittel das Darmkrebsrisiko beeinflussen – und was Sie konkret anders machen können." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* NOVA Farb-Skala */
+    .nova-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .nova-card {
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      border: 1px solid var(--color-border);
+    }
+    .nova-card .nova-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+    .nova-card h3 { font-size: 1rem; font-weight: 700; margin: 0; }
+    .nova-card .nova-sub { font-size: 0.8rem; opacity: 0.6; margin: 0; font-style: italic; }
+    .nova-card p { font-size: 0.88rem; margin: 0.25rem 0 0; }
+    .nova-1 { background: #e8f5e9; border-color: #66bb6a; }
+    .nova-2 { background: #fff9e6; border-color: #f9a825; }
+    .nova-3 { background: #fff3e0; border-color: #fb8c00; }
+    .nova-4 { background: #fce4e4; border-color: #e53935; }
+    [data-theme="dark"] .nova-1 { background: #1b2e1b; border-color: #388e3c; }
+    [data-theme="dark"] .nova-2 { background: #2a2510; border-color: #f57f17; }
+    [data-theme="dark"] .nova-3 { background: #2a1e10; border-color: #e65100; }
+    [data-theme="dark"] .nova-4 { background: #2a1010; border-color: #b71c1c; }
+    .nova-risk-badge {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 99px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      background: #e53935;
+      color: #fff;
+    }
+    .nutri-callout {
+      background: linear-gradient(135deg, #fff3e0, #fff9e6);
+      border-left: 4px solid #E07B00;
+      border-radius: 0 12px 12px 0;
+      padding: 1.2rem 1.4rem;
+      margin: 2rem 0;
+    }
+    [data-theme="dark"] .nutri-callout {
+      background: linear-gradient(135deg, #2a1e10, #2a2510);
+    }
+    .nutri-callout strong { color: #E07B00; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-label="Gastroenterologie">
+          <ellipse cx="14" cy="15" rx="10" ry="8" fill="#01696F" opacity="0.15"/>
+          <ellipse cx="14" cy="14" rx="8" ry="6.5" fill="#01696F" opacity="0.35"/>
+          <ellipse cx="14" cy="13.5" rx="5.5" ry="4.5" fill="#01696F"/>
+          <path d="M9 10 Q11 6 14 7 Q17 6 19 10" stroke="#DA7101" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+        </svg>
+        <span>Gastroenterologie · Patienteninfo</span>
+      </span>
+      <button data-theme-toggle aria-label="Darkmode umschalten">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <p class="hero-label">Ernährung &amp; Krebsrisiko</p>
+      <h1 class="hero-headline">Was steckt wirklich<br><span class="hero-sub">in Ihrem Essen?</span></h1>
+      <p class="hero-body">
+        Nicht alle Kalorien sind gleich. Wie ein Lebensmittel hergestellt wird, beeinflusst Ihr Darmkrebsrisiko – unabhängig davon, ob es „kalorienarm" oder „natürlich" draufsteht.
+      </p>
+      <a href="#verarbeitung" class="btn-primary">Was steckt dahinter?</a>
+    </div>
+  </section>
+
+  <!-- SECTION 1: Verarbeitung erklärt -->
+  <section class="section section-alt" id="verarbeitung">
+    <div class="container container-narrow">
+      <p class="section-eyebrow">Das Wichtigste zuerst</p>
+      <h2>Es geht nicht ums Kalorienzählen</h2>
+      <p>
+        Viele Ernährungsempfehlungen drehen sich um Kalorien, Fett oder Zucker. Die neuere Forschung zeigt: Mindestens genauso wichtig ist, <strong>wie stark ein Lebensmittel industriell verarbeitet ist</strong>.
+      </p>
+      <p>
+        Hochverarbeitete Produkte enthalten oft Zusatzstoffe, Emulgatoren, Aromen und Konservierungsmittel, die das natürliche Darmmikrobiom verändern und chronische Entzündungen fördern – beides Faktoren, die Krebsentstehung begünstigen können.
+      </p>
+      <div class="callout">
+        <strong>Eine große Studie (Wang et al., JAMA Oncology 2025) zeigte:</strong> Menschen mit dem höchsten Anteil an hochverarbeiteten Lebensmitteln in der Ernährung hatten ein <strong>45 % höheres Risiko</strong>, an Darmkrebs zu erkranken – im Vergleich zu Menschen mit dem niedrigsten Anteil.
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: NOVA Skala -->
+  <section class="section" id="nova">
+    <div class="container">
+      <p class="section-eyebrow">Die vier Stufen der Verarbeitung</p>
+      <h2>Vom Apfel zur Chipstüte</h2>
+      <p class="section-intro" style="max-width:60ch;">
+        Wissenschaftler haben eine einfache Einteilung entwickelt – von natürlich bis hochverarbeitet. So lässt sich auf einen Blick einschätzen, was ein Lebensmittel wirklich ist.
+      </p>
+
+      <div class="nova-grid">
+        <div class="nova-card nova-1">
+          <span class="nova-label">Natürlich · NOVA 1</span>
+          <h3>Naturbelassen</h3>
+          <p class="nova-sub">Frisch oder minimal behandelt</p>
+          <p>Obst, Gemüse, Hülsenfrüchte, Nüsse, Eier, frisches Fleisch, Fisch, Wasser, Kräuter.</p>
+        </div>
+        <div class="nova-card nova-2">
+          <span class="nova-label">Kaum verändert · NOVA 2</span>
+          <h3>Küchenzutaten</h3>
+          <p class="nova-sub">Einfach verarbeitet</p>
+          <p>Pflanzenöle, Butter, Mehl, Zucker, Salz, Essig – entstehen durch Pressen, Mahlen, Trocknen.</p>
+        </div>
+        <div class="nova-card nova-3">
+          <span class="nova-label">Verarbeitet · NOVA 3</span>
+          <h3>Verarbeitete Lebensmittel</h3>
+          <p class="nova-sub">Mit einigen Zusätzen</p>
+          <p>Konserven, gereifter Käse, gepökeltes Fleisch, hausgemachtes Brot, Joghurt mit Früchten.</p>
+        </div>
+        <div class="nova-card nova-4">
+          <span class="nova-label">Hochverarbeitet · NOVA 4</span>
+          <h3>Hochverarbeitete Produkte</h3>
+          <p class="nova-sub">Industriell, viele Zusatzstoffe</p>
+          <p>Fertiggerichte, Softdrinks, Chips, Wurstwaren, Frühstückscerealien, Süßigkeiten, Fast Food.</p>
+          <span class="nova-risk-badge">+45 % Darmkrebsrisiko</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Nutri-Score Falle -->
+  <section class="section section-alt" id="nutriscore">
+    <div class="container container-narrow">
+      <p class="section-eyebrow">Häufiges Missverständnis</p>
+      <h2>Grüner Nutri-Score = gesund?</h2>
+      <p>
+        Der Nutri-Score auf Verpackungen bewertet Kalorien, Zucker, Fett und Ballaststoffe – aber <strong>nicht den Verarbeitungsgrad</strong>. Deshalb kann ein hochverarbeitetes Produkt trotzdem ein grünes A bekommen.
+      </p>
+      <div class="nutri-callout">
+        <p><strong>Beispiel:</strong> Ein Light-Softdrink kann Nutri-Score A haben – ist aber trotzdem ein hochverarbeitetes Industrieprodukt mit Aromen, Süßungsmitteln und Zusatzstoffen. Ein frischer Walnuss-Naturjoghurt ohne Zusätze bekommt vielleicht nur ein C – ist aber NOVA 1.</p>
+      </div>
+      <p>
+        Der Nutri-Score ist ein Hilfsmittel, kein vollständiges Bild. Wer weniger hochverarbeitete Lebensmittel essen möchte, schaut besser auf die <strong>Zutatenliste</strong>: Viele Zutaten, die man nicht aus der Küche kennt? Wahrscheinlich hochverarbeitet.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Was tun -->
+  <section class="section" id="was-tun">
+    <div class="container container-narrow">
+      <p class="section-eyebrow">Konkret &amp; machbar</p>
+      <h2>Kein Verzicht – aber mehr Bewusstsein</h2>
+      <p>Es geht nicht darum, perfekt zu essen. Es geht darum, öfter die bessere Wahl zu treffen. Das ist leichter als gedacht:</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <strong>Zutaten lesen – eine Gewohnheit</strong>
+            <p>Wenn Sie eine Verpackung in der Hand halten: Schauen Sie auf die Zutaten. Mehr als 5–6 Zutaten? Zutaten, die Sie nicht kennen oder nicht aussprechen können? Das ist meist ein Zeichen für hohe Verarbeitung.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <strong>Ballaststoffe als echte Schutzschicht</strong>
+            <p>Ballaststoffe ernähren die „guten" Darmbakterien, fördern eine gesunde Darmschleimhaut und können Entzündungen senken. Ziel: <strong>30 g täglich</strong>. Das entspricht: 1 Portion Linsen, 2 Scheiben Vollkornbrot, 1 Handvoll Nüsse, 3 Portionen Gemüse.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <strong>Softdrinks &amp; gezuckerte Getränke reduzieren</strong>
+            <p>Gezuckerte Getränke – auch Fruchtsäfte aus der Flasche – gehören zu den größten Treibern für Übergewicht, Entzündungen und verändertes Mikrobiom. Wasser mit Zitrone oder ungesüßter Tee sind echte Alternativen, die sich nach wenigen Wochen normal anfühlen.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <strong>Rotes &amp; verarbeitetes Fleisch bewusst einsetzen</strong>
+            <p>Wurst, Salami, Schinken und rotes Fleisch (Rind, Schwein, Lamm) sind von der WHO als krebserregend eingestuft. Das bedeutet nicht: nie mehr. Aber: Häufigkeit reduzieren. Weniger Wurst beim Frühstück, mehr Hülsenfrüchte beim Mittagessen.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <strong>Mehr kochen – auch einfach</strong>
+            <p>Wer selbst kocht, weiß was drin ist. Das muss nicht aufwendig sein: Eine Gemüsepfanne mit Hülsenfrüchten, ein Salat mit Olivenöl und Nüssen, ein Omelett mit frischen Kräutern – das sind NOVA 1-Gerichte, die in 15 Minuten fertig sind.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Mikrobom kurz -->
+  <section class="section section-alt" id="mikrobiom">
+    <div class="container container-narrow">
+      <p class="section-eyebrow">Was dahinter steckt</p>
+      <h2>Der Darm denkt mit</h2>
+      <p>
+        Im Darm leben rund <strong>100 Billionen Bakterien</strong> – so viele wie Körperzellen im gesamten Organismus. Diese Gemeinschaft heißt Mikrobiom, und sie beeinflusst nicht nur die Verdauung, sondern auch das Immunsystem und die Entstehung von Entzündungen.
+      </p>
+      <div class="impact-grid">
+        <div class="impact-card">
+          <div class="impact-icon">🌱</div>
+          <strong>Was das Mikrobiom stärkt</strong>
+          <p>Ballaststoffe, fermentierte Lebensmittel (Joghurt, Kefir, Kimchi), Vielfalt auf dem Teller, wenig Antibiotika.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">⚠️</div>
+          <strong>Was es schwächt</strong>
+          <p>Hochverarbeitete Lebensmittel, Emulgatoren, künstliche Süßungsmittel, Bewegungsmangel, chronischer Stress.</p>
+        </div>
+        <div class="impact-card">
+          <div class="impact-icon">🔬</div>
+          <strong>Was die Forschung zeigt</strong>
+          <p>Ein verändertes Mikrobiom ist bei vielen Darmkrebspatienten nachweisbar – es ist ein Risikofaktor, aber auch ein Hebel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-note">Ein Patientenaufklärungsprojekt für Arztpraxen und Kliniken. Diese Seite ersetzt keine ärztliche Beratung – sprechen Sie mit Ihrer Ärztin oder Ihrem Arzt.</p>
+      <p class="footer-note" style="margin-top:0.5rem; font-size:0.78rem; opacity:0.7;">
+        Quellen: Wang et al., JAMA Oncology 2025 (doi:10.1001/jamaoncol.2024.5911); Monteiro et al., NOVA-Klassifikation, Public Health Nutrition 2019; WHO/IARC Monograph 114 (rotes Fleisch &amp; verarbeitetes Fleisch, 2015); Sonnenburg &amp; Bäckhed, Nature 2016 (Mikrobiom &amp; Ernährung).
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const t = document.querySelector('[data-theme-toggle]');
+      const r = document.documentElement;
+      let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+      r.setAttribute('data-theme', d);
+      if (t) t.addEventListener('click', () => {
+        d = d === 'dark' ? 'light' : 'dark';
+        r.setAttribute('data-theme', d);
+        t.innerHTML = d === 'dark'
+          ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+          : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+      });
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.step, .impact-card, .callout, .nova-card, .nutri-callout').forEach(el => {
+        el.classList.add('fade-in');
+        observer.observe(el);
+      });
+    })();
+  </script>
+</body>
+</html>
